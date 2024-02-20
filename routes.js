@@ -1,15 +1,15 @@
 const router = require("express").Router();
 const puppeteer = require("puppeteer");
+// router.get("/", async (req, res) => {
+//   try {
+//     console.log("Hello World!");
+//     res.send("Hello World!");
+//   } catch (error) {
+//     console.log(error);
+//     res.sendStatus(error.message);
+//   }
+// });
 router.get("/", async (req, res) => {
-  try {
-    console.log("Hello World!");
-    res.send("Hello World!");
-  } catch (error) {
-    console.log(error);
-    res.sendStatus(error.message);
-  }
-});
-router.get("/web", async (req, res) => {
   try {
     console.log("Before launching browser");
     const browser = await puppeteer.launch({ headless: true });
