@@ -1,0 +1,10 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+const routes = require("./routes");
+app.use("/", routes);
+app.listen(5000, console.log("server listening on port http://localhost:5000"));
